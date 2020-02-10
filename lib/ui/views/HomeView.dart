@@ -6,7 +6,7 @@ import 'package:flutter_vlc_player/vlc_player.dart';
 import 'package:flutter_vlc_player/vlc_player_controller.dart';
 import 'package:muticam_dashboard/core/models/CameraStream.dart';
 import 'package:muticam_dashboard/core/viewmodels/CameraStreamsViewModel.dart';
-import 'package:muticam_dashboard/ui/widgets/CameraStreamCard.dart';
+import 'package:muticam_dashboard/ui/widgets/CameraVLCStreamCard.dart';
 import 'package:provider/provider.dart';
 
 class HomeView extends StatefulWidget {
@@ -55,8 +55,8 @@ class HomeViewState extends State<HomeView> {
 
                 return ListView.builder(
                   itemCount: cameraStreams.length,
-                  itemBuilder: (buildContext, index) => CameraStreamCard(
-                      cameraStreamDetails: cameraStreams[index]),
+                  itemBuilder: (buildContext, index) => CameraStreamVLCCard(
+                      cameraStreamInfo: cameraStreams[index]),
                 );
               } else {
                 return Text('fetching');
