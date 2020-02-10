@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "152974899925",
+    "firebase_url": "https://multicamdemo-f11b0.firebaseio.com",
+    "project_id": "multicamdemo-f11b0",
+    "storage_bucket": "multicamdemo-f11b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152974899925:android:0ff437cff383831b75005c",
+        "android_client_info": {
+          "package_name": "com.vanillax.multicamdashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152974899925-kil7rdv80lqdvhku1gcmtv0s65abscdv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjzxQqqUmWheCFsfsGlxaLSrHTACynJLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "152974899925-kil7rdv80lqdvhku1gcmtv0s65abscdv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
