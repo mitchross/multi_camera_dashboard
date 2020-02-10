@@ -3,11 +3,16 @@ This app is inspired by this post https://medium.com/@tattwei46/flutter-how-to-d
 
 A app to view multiple RTSP Streams in Flutter!
 
+​![app](https://raw.githubusercontent.com/mitchross/Multi-Camera-Dashboard/master/app.png)
+
+
 ## Getting Started
 Create a firebase account and create a firestore https://firebase.google.com/docs/flutter/setup
 
 Create a fire store with a store called "camerastreams"
-​![firebase](https://raw.githubusercontent.com/mitchross/Multi-Camera-Dashboard/master/firestore.PNG)
+​![firebase](https://raw.githubusercontent.com/mitchross/Multi-Camera-Dashboard/master/firestore.png)
+​![app](https://raw.githubusercontent.com/mitchross/Multi-Camera-Dashboard/master/app.png)
+
 
 ## Running
 
