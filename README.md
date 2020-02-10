@@ -11,7 +11,6 @@ Create a firebase account and create a firestore https://firebase.google.com/doc
 
 Create a fire store with a store called "camerastreams"
 ​![firebase](https://raw.githubusercontent.com/mitchross/Multi-Camera-Dashboard/master/firestore.png)
-​![app](https://raw.githubusercontent.com/mitchross/Multi-Camera-Dashboard/master/app.png)
 
 
 ## Running
