@@ -9,6 +9,10 @@ Create a firebase account and create a firestore https://firebase.google.com/doc
 Create a fire store with a store called "camerastreams"
 ​![firebase](https://raw.githubusercontent.com/mitchross/Multi-Camera-Dashboard/master/firestore.PNG)
 
+## Running
+
+ In the root of directory run "flutter run" from the terminal
+
 ## Getting Started With Flutter
 
 This project is a starting point for a Flutter application.
