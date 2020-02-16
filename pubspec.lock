@@ -124,11 +124,13 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_vlc_player:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
-      name: flutter_vlc_player
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: ios_multiple_instance
+      resolved-ref: "3bd964143a988a52f21c5ae77e28badece073978"
+      url: "git://github.com/kraigspear/flutter_vlc_player.git"
+    source: git
     version: "0.0.2"
   flutter_web_plugins:
     dependency: transitive
