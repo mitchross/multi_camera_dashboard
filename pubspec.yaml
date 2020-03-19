@@ -23,9 +23,9 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  http: ^0.12.0+2
-  cloud_firestore: ^0.12.9+5
-  firebase_core: ^0.4.0+9
+  http: ^0.12.0+4
+  cloud_firestore: ^0.13.4+2
+  firebase_core: ^0.4.4+3
   provider: ^3.0.0+1
   get_it: ^3.1.0
   image_picker_saver: ^0.3.0
@@ -41,8 +41,8 @@ dev_dependencies:
   
   flutter_vlc_player:
     git:
-      url: git://github.com/kraigspear/flutter_vlc_player.git
-      ref: ios_multiple_instance
+      url: git://github.com/mitchross/flutter_vlc_player.git
+      ref: master
 
 
 
