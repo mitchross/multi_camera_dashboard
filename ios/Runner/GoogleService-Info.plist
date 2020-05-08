@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>152974899925-2q9u7gshpdp1keqv50i9df4gavvb7kr2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.152974899925-2q9u7gshpdp1keqv50i9df4gavvb7kr2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCwjIw0tYSZ4zRy8jmXZpFuB9KcML4nv_A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>152974899925</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.vanillax.multicamDashboard</string>
+	<key>PROJECT_ID</key>
+	<string>multicamdemo-f11b0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>multicamdemo-f11b0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:152974899925:ios:0210b92723005d6575005c</string>
+	<key>DATABASE_URL</key>
+	<string>https://multicamdemo-f11b0.firebaseio.com</string>
+</dict>
+</plist>
