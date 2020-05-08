@@ -16,19 +16,18 @@ class CameraStreamVLCCard extends StatefulWidget {
 class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
   VlcPlayerController controller;
 
-    @override
+  @override
   void initState() {
     controller = new VlcPlayerController(onInit: () {
       controller.play();
     });
-    controller.addListener(() {
-      setState(() {});
-    });
-    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    var _height = MediaQuery.of(context).size.height * 0.45;
+    var _width = MediaQuery.of(context).size.height * 0.9;
+
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -43,22 +42,21 @@ class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
         child: Card(
           elevation: 5,
           child: Container(
-            height: MediaQuery.of(context).size.height * 0.45,
-            width: MediaQuery.of(context).size.height * 0.9,
+            height: _height,
+            width: _width,
             child: Column(
               children: <Widget>[
                 Hero(
                   tag: widget.cameraStreamInfo.id,
                   child: SizedBox(
-                    width: (MediaQuery.of(context).size.height * 0.9),
-                    height:
-                        (MediaQuery.of(context).size.height * 0.45),
-                  child: new VlcPlayer(
-                    aspectRatio: 16/9,
-                    url: widget.cameraStreamInfo.cameraStreamUrl,
-                    controller: controller,
-                    placeholder: Center(child: CircularProgressIndicator()),
-                  ),
+                    height: _height,
+                    width: _width,
+                    child: new VlcPlayer(
+                      aspectRatio: _width / _height,
+                      url: widget.cameraStreamInfo.cameraStreamUrl,
+                      controller: controller,
+                      placeholder: Center(child: CircularProgressIndicator()),
+                    ),
                   ),
                 ),
                 Padding(
