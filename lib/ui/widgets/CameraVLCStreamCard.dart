@@ -14,7 +14,18 @@ class CameraStreamVLCCard extends StatefulWidget {
 }
 
 class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
-  final VlcPlayerController controller = VlcPlayerController();
+  VlcPlayerController controller;
+
+    @override
+  void initState() {
+    controller = new VlcPlayerController(onInit: () {
+      controller.play();
+    });
+    controller.addListener(() {
+      setState(() {});
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +53,7 @@ class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
                     width: (MediaQuery.of(context).size.height * 0.9),
                     height:
                         (MediaQuery.of(context).size.height * 0.45),
-                  child: VlcPlayer(
+                  child: new VlcPlayer(
                     aspectRatio: 16/9,
                     url: widget.cameraStreamInfo.cameraStreamUrl,
                     controller: controller,

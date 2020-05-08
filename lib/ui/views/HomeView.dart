@@ -18,13 +18,12 @@ class HomeViewState extends State<HomeView> {
 
   Uint8List image;
   GlobalKey imageKey;
-  VlcPlayer videoView;
-  VlcPlayerController _videoViewController;
+
+
 
   @override
   void initState() {
     imageKey = new GlobalKey();
-    _videoViewController = new VlcPlayerController();
     super.initState();
   }
 
