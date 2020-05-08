@@ -2,8 +2,7 @@ import 'dart:typed_data';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_vlc_player/vlc_player.dart';
-import 'package:flutter_vlc_player/vlc_player_controller.dart';
+import 'package:flutter_vlc_player/flutter_vlc_player.dart';
 import 'package:muticam_dashboard/core/models/CameraStream.dart';
 import 'package:muticam_dashboard/core/viewmodels/CameraStreamsViewModel.dart';
 import 'package:muticam_dashboard/ui/widgets/CameraVLCStreamCard.dart';

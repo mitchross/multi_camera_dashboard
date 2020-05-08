@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_vlc_player/vlc_player.dart';
-import 'package:flutter_vlc_player/vlc_player_controller.dart';
+import 'package:flutter_vlc_player/flutter_vlc_player.dart';
 import 'package:muticam_dashboard/core/models/CameraStream.dart';
 import 'package:muticam_dashboard/ui/views/CameraStreamDetails.dart';
 
@@ -39,14 +38,16 @@ class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
               children: <Widget>[
                 Hero(
                   tag: widget.cameraStreamInfo.id,
+                  child: SizedBox(
+                    width: (MediaQuery.of(context).size.height * 0.9),
+                    height:
+                        (MediaQuery.of(context).size.height * 0.45),
                   child: VlcPlayer(
-                    defaultWidth:
-                        (MediaQuery.of(context).size.height * 0.9).round(),
-                    defaultHeight:
-                        (MediaQuery.of(context).size.height * 0.45).round(),
+                    aspectRatio: 16/9,
                     url: widget.cameraStreamInfo.cameraStreamUrl,
                     controller: controller,
                     placeholder: Center(child: CircularProgressIndicator()),
+                  ),
                   ),
                 ),
                 Padding(
