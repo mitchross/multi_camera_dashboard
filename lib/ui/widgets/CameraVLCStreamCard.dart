@@ -26,7 +26,7 @@ class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
   @override
   Widget build(BuildContext context) {
     var _height = MediaQuery.of(context).size.height * 0.45;
-    var _width = MediaQuery.of(context).size.height * 0.9;
+    var _width = MediaQuery.of(context).size.width * 0.9;
 
     return GestureDetector(
       onTap: () {

@@ -32,6 +32,7 @@ class HomeViewState extends State<HomeView> {
     final cameraStreamProvider = Provider.of<CameraStreamsViewModel>(context);
 
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushNamed(context, '/addCameraStream');
