@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_vlc_player/vlc_player.dart';
-import 'package:flutter_vlc_player/vlc_player_controller.dart';
+import 'package:flutter_vlc_player/flutter_vlc_player.dart';
 import 'package:muticam_dashboard/core/models/CameraStream.dart';
 import 'package:muticam_dashboard/ui/views/CameraStreamDetails.dart';
 
@@ -15,10 +14,20 @@ class CameraStreamVLCCard extends StatefulWidget {
 }
 
 class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
-  final VlcPlayerController controller = VlcPlayerController();
+  VlcPlayerController controller;
+
+  @override
+  void initState() {
+    controller = new VlcPlayerController(onInit: () {
+      controller.play();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
+    var _height = MediaQuery.of(context).size.height * 0.45;
+    var _width = MediaQuery.of(context).size.width * 0.9;
+
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -33,20 +42,21 @@ class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
         child: Card(
           elevation: 5,
           child: Container(
-            height: MediaQuery.of(context).size.height * 0.45,
-            width: MediaQuery.of(context).size.height * 0.9,
+            height: _height,
+            width: _width,
             child: Column(
               children: <Widget>[
                 Hero(
                   tag: widget.cameraStreamInfo.id,
-                  child: VlcPlayer(
-                    defaultWidth:
-                        (MediaQuery.of(context).size.height * 0.9).round(),
-                    defaultHeight:
-                        (MediaQuery.of(context).size.height * 0.45).round(),
-                    url: widget.cameraStreamInfo.cameraStreamUrl,
-                    controller: controller,
-                    placeholder: Center(child: CircularProgressIndicator()),
+                  child: SizedBox(
+                    height: _height,
+                    width: _width,
+                    child: new VlcPlayer(
+                      aspectRatio: _width / _height,
+                      url: widget.cameraStreamInfo.cameraStreamUrl,
+                      controller: controller,
+                      placeholder: Center(child: CircularProgressIndicator()),
+                    ),
                   ),
                 ),
                 Padding(

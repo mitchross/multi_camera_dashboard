@@ -2,8 +2,7 @@ import 'dart:typed_data';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_vlc_player/vlc_player.dart';
-import 'package:flutter_vlc_player/vlc_player_controller.dart';
+import 'package:flutter_vlc_player/flutter_vlc_player.dart';
 import 'package:muticam_dashboard/core/models/CameraStream.dart';
 import 'package:muticam_dashboard/core/viewmodels/CameraStreamsViewModel.dart';
 import 'package:muticam_dashboard/ui/widgets/CameraVLCStreamCard.dart';
@@ -19,13 +18,12 @@ class HomeViewState extends State<HomeView> {
 
   Uint8List image;
   GlobalKey imageKey;
-  VlcPlayer videoView;
-  VlcPlayerController _videoViewController;
+
+
 
   @override
   void initState() {
     imageKey = new GlobalKey();
-    _videoViewController = new VlcPlayerController();
     super.initState();
   }
 
@@ -34,6 +32,7 @@ class HomeViewState extends State<HomeView> {
     final cameraStreamProvider = Provider.of<CameraStreamsViewModel>(context);
 
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushNamed(context, '/addCameraStream');
