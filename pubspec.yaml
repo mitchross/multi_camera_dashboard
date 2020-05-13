@@ -26,8 +26,8 @@ dependencies:
   http: ^0.12.1
   cloud_firestore: ^0.13.5
   firebase_core: ^0.4.4+3
-  provider: ^3.0.0+1
-  get_it: ^3.1.0
+  provider: ^4.1.1
+  get_it: ^4.0.2
   image_picker_saver: ^0.3.0
   flutter_svg: ^0.17.4
 

@@ -16,7 +16,7 @@ class MultiCameraStreamApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          builder: (_) => GetIt.I<CameraStreamsViewModel>(),
+          create: (_) => GetIt.I<CameraStreamsViewModel>(),
         )
       ],
       child: MaterialApp(
