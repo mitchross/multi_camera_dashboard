@@ -30,6 +30,7 @@ dependencies:
   get_it: ^3.1.0
   image_picker_saver: ^0.3.0
   flutter_svg: ^0.17.4
+  flutter_vlc_player: ^3.0.2
 
 
   
@@ -39,13 +40,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   
-  flutter_vlc_player:
-    git:
-      url: git://github.com/mitchross/flutter_vlc_player.git
-      ref: swift-conversion-v2
-
-
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

@@ -25,7 +25,7 @@ class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
 
   @override
   Widget build(BuildContext context) {
-    var _height = MediaQuery.of(context).size.height * 0.45;
+    var _height = MediaQuery.of(context).size.height * 0.33;
     var _width = MediaQuery.of(context).size.width * 0.9;
 
     return GestureDetector(
@@ -49,10 +49,10 @@ class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
                 Hero(
                   tag: widget.cameraStreamInfo.id,
                   child: SizedBox(
-                    height: _height,
+                    height: 360,
                     width: _width,
                     child: new VlcPlayer(
-                      aspectRatio: _width / _height,
+                      aspectRatio: 16/9,
                       url: widget.cameraStreamInfo.cameraStreamUrl,
                       controller: controller,
                       placeholder: Center(child: CircularProgressIndicator()),
