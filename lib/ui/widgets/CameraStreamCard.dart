@@ -6,7 +6,7 @@ import 'package:muticam_dashboard/ui/views/CameraStreamDetails.dart';
 class CameraStreamCard extends StatelessWidget {
   final CameraStream cameraStreamDetails;
 
-  CameraStreamCard({@required this.cameraStreamDetails});
+  CameraStreamCard({required this.cameraStreamDetails});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class CameraStreamCard extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Hero(
-                  tag: cameraStreamDetails.id,
+                  tag: cameraStreamDetails.id!,
                   child: Image.asset(
                     'assets/camera.svg',
                     height: MediaQuery.of(context).size.height * 0.35,

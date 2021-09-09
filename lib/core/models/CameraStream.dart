@@ -1,7 +1,7 @@
 class CameraStream {
-  String id;
-  String cameraStreamUrl;
-  String cameraStreamTitle;
+  String? id;
+  String? cameraStreamUrl;
+  String? cameraStreamTitle;
 
   CameraStream({this.id, this.cameraStreamUrl, this.cameraStreamTitle});
 

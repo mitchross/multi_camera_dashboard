@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 class CameraStreamDetails extends StatelessWidget {
   final CameraStream cameraStream;
 
-  CameraStreamDetails({@required this.cameraStream});
+  CameraStreamDetails({required this.cameraStream});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class CameraStreamDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Hero(
-            tag: cameraStream.id,
+            tag: cameraStream.id!,
             child: Image.asset(
               'assets/camera.svg',
               height: MediaQuery.of(context).size.height * 0.35,
@@ -64,7 +64,7 @@ class CameraStreamDetails extends StatelessWidget {
                 fontStyle: FontStyle.italic),
           ),
           Text(
-            cameraStream.cameraStreamUrl,
+            cameraStream.cameraStreamUrl!,
             style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 22,

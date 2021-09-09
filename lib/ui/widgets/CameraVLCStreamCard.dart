@@ -7,19 +7,19 @@ import 'package:muticam_dashboard/ui/views/CameraStreamDetails.dart';
 class CameraStreamVLCCard extends StatefulWidget {
   final CameraStream cameraStreamInfo;
 
-  CameraStreamVLCCard({@required this.cameraStreamInfo});
+  CameraStreamVLCCard({required this.cameraStreamInfo});
 
   @override
   CameraStreamVLCCardState createState() => CameraStreamVLCCardState();
 }
 
 class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
-  VlcPlayerController controller;
+  late VlcPlayerController controller;
 
   @override
   void initState() {
     controller = new VlcPlayerController.network(
-        widget.cameraStreamInfo.cameraStreamUrl,
+        widget.cameraStreamInfo.cameraStreamUrl!,
          autoPlay: true,);
   }
 
@@ -48,7 +48,7 @@ class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
               children: <Widget>[
                 Expanded(child: 
                 Hero(
-                  tag: widget.cameraStreamInfo.id,
+                  tag: widget.cameraStreamInfo.id!,
                   
                   child: SizedBox(
                     height: 360,

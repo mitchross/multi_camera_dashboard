@@ -14,10 +14,10 @@ class HomeView extends StatefulWidget {
 }
 
 class HomeViewState extends State<HomeView> {
-  List<CameraStream> cameraStreams;
+  late List<CameraStream> cameraStreams;
 
-  Uint8List image;
-  GlobalKey imageKey;
+  Uint8List? image;
+  GlobalKey? imageKey;
 
 
 
@@ -47,9 +47,9 @@ class HomeViewState extends State<HomeView> {
             stream: cameraStreamProvider.fetchCameraDataStream(),
             builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
               if (snapshot.hasData) {
-                cameraStreams = snapshot.data.docs
+                cameraStreams = snapshot.data!.docs
                     .map(
-                        (doc) => CameraStream.fromMap(doc.data(), doc.id))
+                        (doc) => CameraStream.fromMap(doc.data() as Map<dynamic, dynamic>, doc.id))
                     .toList();
 
                 return ListView.builder(

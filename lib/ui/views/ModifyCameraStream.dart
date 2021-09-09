@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 class ModifyCameraStream extends StatefulWidget {
   final CameraStream cameraStream;
 
-  ModifyCameraStream({@required this.cameraStream});
+  ModifyCameraStream({required this.cameraStream});
 
   @override
   ModifyCameraState createState() => ModifyCameraState();
@@ -16,9 +16,9 @@ class ModifyCameraStream extends StatefulWidget {
 class ModifyCameraState extends State<ModifyCameraStream> {
   final _formKey = GlobalKey<FormState>();
 
-  String title;
-  String streamURL;
-  String camera;
+  String? title;
+  String? streamURL;
+  String? camera;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class ModifyCameraState extends State<ModifyCameraStream> {
                     filled: true,
                   ),
                   validator: (value) {
-                    if (value.isEmpty) {
+                    if (value!.isEmpty) {
                       return 'Please enter Camera Stream Title';
                     }
                   },
@@ -62,7 +62,7 @@ class ModifyCameraState extends State<ModifyCameraStream> {
                     filled: true,
                   ),
                   validator: (value) {
-                    if (value.isEmpty) {
+                    if (value!.isEmpty) {
                       return 'Please enter The Stream URL';
                     }
                   },
@@ -70,8 +70,8 @@ class ModifyCameraState extends State<ModifyCameraStream> {
               RaisedButton(
                 splashColor: Colors.red,
                 onPressed: () async {
-                  if (_formKey.currentState.validate()) {
-                    _formKey.currentState.save();
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState!.save();
                     await cameraStreamStoreProvider.updateCameraStreamByID(
                         CameraStream(
                             cameraStreamTitle: title,

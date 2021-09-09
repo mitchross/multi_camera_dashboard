@@ -7,39 +7,39 @@ import 'package:muticam_dashboard/core/models/CameraStream.dart';
 import 'package:muticam_dashboard/core/services/FirestoreApiService.dart';
 
 class CameraStreamsViewModel extends ChangeNotifier {
-  FireStoreApiService firestoreAPI = GetIt.I<FireStoreApiService>();
-  List<CameraStream> cameraStreams;
+  FireStoreApiService? firestoreAPI = GetIt.I<FireStoreApiService>();
+  List<CameraStream>? cameraStreams;
 
-  Future<List<CameraStream>> fetchCameraStreams() async {
-    var result = await firestoreAPI.getAllCameraStreams();
+  Future<List<CameraStream>?> fetchCameraStreams() async {
+    var result = await firestoreAPI!.getAllCameraStreams();
 
     cameraStreams = result.docs
-        .map((doc) => CameraStream.fromMap(doc.data(), doc.id))
+        .map((doc) => CameraStream.fromMap(doc.data() as Map<dynamic, dynamic>, doc.id))
         .toList();
     return cameraStreams;
   }
 
   Stream<QuerySnapshot> fetchCameraDataStream() {
-    return firestoreAPI.getStreamDataCollection();
+    return firestoreAPI!.getStreamDataCollection();
   }
 
   Future<CameraStream> getCameraStreambyID(String id) async {
-    var doc = await firestoreAPI.getCameraStreamById(id);
-    return CameraStream.fromMap(doc.data(), doc.id);
+    var doc = await firestoreAPI!.getCameraStreamById(id);
+    return CameraStream.fromMap(doc.data() as Map<dynamic, dynamic>, doc.id);
   }
 
-  Future removeCameraStreamByID(String id) async {
-    await firestoreAPI.removeCameraStream(id);
+  Future removeCameraStreamByID(String? id) async {
+    await firestoreAPI!.removeCameraStream(id);
     return;
   }
 
-  Future updateCameraStreamByID(CameraStream data, String id) async {
-    await firestoreAPI.updateCameraStream(data.toJson(), id);
+  Future updateCameraStreamByID(CameraStream data, String? id) async {
+    await firestoreAPI!.updateCameraStream(data.toJson(), id);
     return;
   }
 
   Future addCameraStream(CameraStream data) async {
-    var result = await firestoreAPI.addCameraStream(data.toJson());
+    var result = await firestoreAPI!.addCameraStream(data.toJson());
 
     return;
   }

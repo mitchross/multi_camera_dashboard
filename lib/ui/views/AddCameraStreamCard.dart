@@ -12,8 +12,8 @@ class AddCameraStreamCard extends StatefulWidget {
 class AddCameraStreamCardState extends State<AddCameraStreamCard> {
   final _formKey = GlobalKey<FormState>();
 
-  String title;
-  String streamURL;
+  String? title;
+  String? streamURL;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class AddCameraStreamCardState extends State<AddCameraStreamCard> {
                     filled: true,
                   ),
                   validator: (value) {
-                    if (value.isEmpty) {
+                    if (value!.isEmpty) {
                       return 'Please enter Camera Stream Title';
                     }
                   },
@@ -55,7 +55,7 @@ class AddCameraStreamCardState extends State<AddCameraStreamCard> {
                     filled: true,
                   ),
                   validator: (value) {
-                    if (value.isEmpty) {
+                    if (value!.isEmpty) {
                       return 'Please enter a camera stream URL';
                     }
                   },
@@ -63,8 +63,8 @@ class AddCameraStreamCardState extends State<AddCameraStreamCard> {
               RaisedButton(
                 splashColor: Colors.red,
                 onPressed: () async {
-                  if (_formKey.currentState.validate()) {
-                    _formKey.currentState.save();
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState!.save();
                     await cameraStreamStoreProvider.addCameraStream(
                         CameraStream(
                             cameraStreamUrl: streamURL,

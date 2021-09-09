@@ -11,8 +11,6 @@ class InternalRouter {
         return MaterialPageRoute(builder: (_) => HomeView());
       case '/addCameraStream':
         return MaterialPageRoute(builder: (_) => AddCameraStreamCard());
-      case '/cameraStreamDetails':
-        return MaterialPageRoute(builder: (_) => CameraStreamDetails());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(
