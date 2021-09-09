@@ -18,9 +18,9 @@ class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
 
   @override
   void initState() {
-    controller = new VlcPlayerController(onInit: () {
-      controller.play();
-    });
+    controller = new VlcPlayerController.network(
+        widget.cameraStreamInfo.cameraStreamUrl,
+         autoPlay: true,);
   }
 
   @override
@@ -46,19 +46,20 @@ class CameraStreamVLCCardState extends State<CameraStreamVLCCard> {
             width: _width,
             child: Column(
               children: <Widget>[
+                Expanded(child: 
                 Hero(
                   tag: widget.cameraStreamInfo.id,
+                  
                   child: SizedBox(
                     height: 360,
                     width: _width,
                     child: new VlcPlayer(
-                      aspectRatio: 16/9,
-                      url: widget.cameraStreamInfo.cameraStreamUrl,
+                      aspectRatio: 16 / 9,
                       controller: controller,
                       placeholder: Center(child: CircularProgressIndicator()),
                     ),
                   ),
-                ),
+                )),
                 Padding(
                   padding: EdgeInsets.all(16),
                   child: Row(

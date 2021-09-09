@@ -32,7 +32,7 @@ class HomeViewState extends State<HomeView> {
     final cameraStreamProvider = Provider.of<CameraStreamsViewModel>(context);
 
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+     
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushNamed(context, '/addCameraStream');
@@ -47,9 +47,9 @@ class HomeViewState extends State<HomeView> {
             stream: cameraStreamProvider.fetchCameraDataStream(),
             builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
               if (snapshot.hasData) {
-                cameraStreams = snapshot.data.documents
+                cameraStreams = snapshot.data.docs
                     .map(
-                        (doc) => CameraStream.fromMap(doc.data, doc.documentID))
+                        (doc) => CameraStream.fromMap(doc.data(), doc.id))
                     .toList();
 
                 return ListView.builder(

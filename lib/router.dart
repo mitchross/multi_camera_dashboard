@@ -4,7 +4,7 @@ import 'package:muticam_dashboard/ui/views/AddCameraStreamCard.dart';
 import 'package:muticam_dashboard/ui/views/CameraStreamDetails.dart';
 import 'package:muticam_dashboard/ui/views/HomeView.dart';
 
-class Router {
+class InternalRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case '/':

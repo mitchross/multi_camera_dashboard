@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FireStoreApiService {
-  final Firestore firestore = Firestore.instance;
+  final FirebaseFirestore firestore = FirebaseFirestore.instance;
   final String path;
   CollectionReference ref;
 
@@ -10,7 +10,7 @@ class FireStoreApiService {
   }
 
   Future<QuerySnapshot> getAllCameraStreams() {
-    return ref.getDocuments();
+    return ref.get();
   }
 
   Stream<QuerySnapshot> getStreamDataCollection() {
@@ -18,11 +18,11 @@ class FireStoreApiService {
   }
 
   Future<DocumentSnapshot> getCameraStreamById(String id) {
-    return ref.document(id).get();
+    return ref.doc(id).get();
   }
 
   Future<void> removeCameraStream(String id) {
-    return ref.document(id).delete();
+    return ref.doc(id).delete();
   }
 
   Future<DocumentReference> addCameraStream(Map data) {
@@ -30,6 +30,6 @@ class FireStoreApiService {
   }
 
   Future<void> updateCameraStream(Map data, String id) {
-    return ref.document(id).updateData(data);
+    return ref.doc(id).update(data);
   }
 }
