@@ -1,3 +1,9 @@
+# 9.9.2021 update
+
+I have updated the firebase db to be read only due to abuse. The save operation works if you import your own firebase and modify project files to include your own configs. I prefer batteries included approach to demo app, so I will continue providing my firebase for helping out. 
+
+I plan to migrate this project off MVVM to Bloc soon.
+
 # muticam_dashboard
 This app is inspired by this post https://medium.com/@tattwei46/flutter-how-to-do-crud-with-firebase-rtdb-ce61e3ce53a
 
