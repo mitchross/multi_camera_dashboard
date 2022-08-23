@@ -1,4 +1,4 @@
-package com.vanillax.multi_camera_dashboard
+package com.example.multi_cam_dashboard
 
 import io.flutter.embedding.android.FlutterActivity
 

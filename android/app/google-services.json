@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:152974899925:android:0ff437cff383831b75005c",
+        "mobilesdk_app_id": "1:152974899925:android:107b7245c7d6226a75005c",
         "android_client_info": {
-          "package_name": "com.vanillax.multicamdashboard"
+          "package_name": "com.example.multi_cam_dashboard"
         }
       },
       "oauth_client": [
@@ -32,46 +32,10 @@
               "client_type": 3
             },
             {
-              "client_id": "152974899925-2q9u7gshpdp1keqv50i9df4gavvb7kr2.apps.googleusercontent.com",
+              "client_id": "152974899925-03phpvcbmovarj2jbgo4ce18685bag38.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.vanillax.multicamDashboard"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:152974899925:android:e870fa5ccf54045a75005c",
-        "android_client_info": {
-          "package_name": "com.vanillax.muticam_dashboard"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "152974899925-kil7rdv80lqdvhku1gcmtv0s65abscdv.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCjzxQqqUmWheCFsfsGlxaLSrHTACynJLU"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "152974899925-kil7rdv80lqdvhku1gcmtv0s65abscdv.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "152974899925-2q9u7gshpdp1keqv50i9df4gavvb7kr2.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.vanillax.multicamDashboard"
+                "bundle_id": "com.example.multiCamDashboard"
               }
             }
           ]

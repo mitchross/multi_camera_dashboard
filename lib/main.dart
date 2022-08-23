@@ -7,11 +7,14 @@ import 'package:muticam_dashboard/locator.dart';
 import 'package:muticam_dashboard/router.dart';
 import 'package:provider/provider.dart';
 
+import 'firebase_options.dart';
+
 Future<void> main() async {
     WidgetsFlutterBinding.ensureInitialized();
 
-    await Firebase.initializeApp();
-
+    await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
   setupLocator();
   runApp(MultiCameraStreamApp());
 }
