@@ -1,3 +1,7 @@
+# 8.23.2022 update
+
+Made firebase work again with latest flutter and flutterfire. Follow https://firebase.google.com/docs/flutter/setup?platform=ios on your own.
+
 # 9.9.2021 update
 
 I have updated the firebase db to be read only due to abuse. The save operation works if you import your own firebase and modify project files to include your own configs. I prefer batteries included approach to demo app, so I will continue providing my firebase for helping out. 
