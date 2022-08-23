@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>152974899925-jk117o7ulmhjndr23l4j815rb95oa95h.apps.googleusercontent.com</string>
+	<string>152974899925-03phpvcbmovarj2jbgo4ce18685bag38.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.152974899925-jk117o7ulmhjndr23l4j815rb95oa95h</string>
+	<string>com.googleusercontent.apps.152974899925-03phpvcbmovarj2jbgo4ce18685bag38</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCwjIw0tYSZ4zRy8jmXZpFuB9KcML4nv_A</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.vanillax.multiCameraDashboard</string>
+	<string>com.example.multiCamDashboard</string>
 	<key>PROJECT_ID</key>
 	<string>multicamdemo-f11b0</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:152974899925:ios:dbbb4cb1cd09bcdc75005c</string>
+	<string>1:152974899925:ios:f5601a786bc8b16675005c</string>
 	<key>DATABASE_URL</key>
 	<string>https://multicamdemo-f11b0.firebaseio.com</string>
 </dict>
