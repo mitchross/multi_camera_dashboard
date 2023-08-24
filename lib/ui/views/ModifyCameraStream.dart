@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:muticam_dashboard/core/models/CameraStream.dart';
 import 'package:muticam_dashboard/core/viewmodels/CameraStreamsViewModel.dart';
@@ -48,6 +47,7 @@ class ModifyCameraState extends State<ModifyCameraStream> {
                     if (value!.isEmpty) {
                       return 'Please enter Camera Stream Title';
                     }
+                    return null;
                   },
                   onSaved: (value) => title = value),
               SizedBox(
@@ -65,10 +65,16 @@ class ModifyCameraState extends State<ModifyCameraStream> {
                     if (value!.isEmpty) {
                       return 'Please enter The Stream URL';
                     }
+                    return null;
                   },
                   onSaved: (value) => streamURL = value),
-              RaisedButton(
-                splashColor: Colors.red,
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors
+                      .blue, disabledForegroundColor: Colors
+                      .red.withOpacity(0.38), disabledBackgroundColor: Colors
+                      .red.withOpacity(0.12), // This can be used as a replacement for splashColor
+                ),
                 onPressed: () async {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
@@ -82,7 +88,6 @@ class ModifyCameraState extends State<ModifyCameraStream> {
                 },
                 child: Text('Modify Camera Stream',
                     style: TextStyle(color: Colors.white)),
-                color: Colors.blue,
               )
             ],
           ),

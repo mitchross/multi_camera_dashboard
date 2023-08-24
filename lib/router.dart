@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:muticam_dashboard/ui/views/AddCameraStreamCard.dart';
-import 'package:muticam_dashboard/ui/views/CameraStreamDetails.dart';
 import 'package:muticam_dashboard/ui/views/HomeView.dart';
 
 class InternalRouter {
